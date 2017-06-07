@@ -1,6 +1,6 @@
 import numpy as np
 from character import Character
-from helper_functions import add_elevens
+from helper_functions import add_elevens,add_tens,add_poisoner
 
 
 n_cards = 80
@@ -10,8 +10,11 @@ the_dict = np.array([Character(id=i, name="numero  " + str(i), value=i, text="",
 
 
 add_elevens(the_dict)
+add_tens(the_dict)
+add_poisoner(the_dict)
 
 
 
 for i in range(n_cards):
     print(the_dict[i].get_card())
+
