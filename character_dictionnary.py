@@ -1,14 +1,20 @@
 import numpy as np
 from character import Character
-from helper_functions import add_elevens,add_tens,add_poisoner
+from helper_functions import add_elevens, add_tens, add_poisoner, add_NRV_family, add_50_bonus, add_snow_white_77, \
+    add_brothers_sisters_2772_3663
+
 
 def add_family_rules(a_dict):
     add_elevens(a_dict)
     add_tens(a_dict)
+    add_poisoner(a_dict)
+    add_NRV_family(a_dict)
 
 
 def add_unique_rules(a_dict):
-    add_poisoner(a_dict)
+    add_50_bonus(a_dict)
+    add_snow_white_77(a_dict)
+    add_brothers_sisters_2772_3663(a_dict)
 
 
 def add_bonus_cards(a_dict):
@@ -26,7 +32,7 @@ def create_the_dict(n_cards):
 
 
 if __name__ == '__main__':
-        
+
     n_cards = 80
     the_dict = create_the_dict(80)
     for i in range(n_cards):
